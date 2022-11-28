@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de cores</title>
+    <link rel="stylesheet" href="estilo/style.css">
+</head>
+
+<body>
+    <main>
+        <h1>Gerador de cores Hexadecimal</h1>
+        <section id="resultado">
+            <input type="text" name="resultado" id="iresultado">
+            <div id="elementos">
+                <span id="copiar"><img src="icones/icone-copiar.png" alt="copiar"></span>
+                <span id="atualizar"><img src="icones/icone-repetir.png" alt="atualizar"></span>
+            </div>
+            <button>ATUALIZAR</button>
+            <div id="adicionar-elementos">
+                <label for="inumeros">Apenas Números:</label>
+                <input type="radio" name="checar" id="inumeros">
+                <!-- <input type="checkbox" name="checar" id="inumeros"> -->
+                <label for="iletras">Apenas Letras:</label>
+                <input type="radio" name="checar" id="iletras">
+                <!-- <input type="checkbox" name="checar" id="iletras"> -->
+                <label for="iambos">Númeos e Letras:</label>
+                <input type="radio" name="checar" id="iambos">
+                <!-- <input type="checkbox" name="checar" id="iambos"> -->
+            </div>
+        </section>
+        <section id="resposta">
+            <h2>Resposta: <span id="contagem">10</span></h2>
+            <div id="cor-resposta"></div>
+        </section>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

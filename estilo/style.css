@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --Azul: #6c49fe;
+    --RoxoEscuro: #8961fe;
+    --RoxoEscuro02: #885de9;
+    --RoxoClaro: #c290ff;
+    --RoxoClaro02: #dea8ff;
+    --teste: #aaffda;
+}
+
+body {
+    background-color: var(--teste);
+    /* background-color: #d3d3d3;  */
+}
+
+main {
+    margin: 20px auto;
+    max-width: 700px;
+    height: 350px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+main>h1 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+main>section#resultado {
+    width: 100%;
+    height: 40%;
+    background-color: var(--RoxoEscuro02);
+    text-align: center;
+    padding-top: 25px;
+}
+
+main>section>input {
+    width: 50%;
+    padding: 10px;
+    font-size: 1.2em;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+}
+
+div#elementos {
+    margin-right: 40px;
+    margin-top: -30px;
+}
+
+main>section> div#elementos >span {
+    float: right;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+main > section > button {
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    padding: 10px;
+    background-color: var(--RoxoClaro);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+main section > div#adicionar-elementos {
+    position: relative;
+    top: -20%;
+    width: 22%;
+    height: 50%;
+    text-align: right;
+}
+
+main > section#resposta {
+    width: 100%;
+    height: 40%;
+    background-color: var(--RoxoEscuro);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+section#resposta > h2 {
+    text-align: center;
+}
+
+section#resposta > div#cor-resposta {
+    width: 30%;
+    height: 50%;
+    background-color: var(--RoxoClaro02);
+    margin: 10px auto;
+}
