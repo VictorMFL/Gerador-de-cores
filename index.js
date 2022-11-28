@@ -21,7 +21,7 @@ function geradorDeCores() {
         caracteres = numeros
     } else if (letrasChecked.checked) {
         caracteres = letras
-    } else if(ambosChecked.checked) {
+    } else if (ambosChecked.checked) {
         caracteres = ambosCaracteres
     }
 
@@ -32,6 +32,15 @@ function geradorDeCores() {
 
     inputEl.value = `${hashtag}` + cor
     console.log(cor)
+
+    let corResposta = document.querySelector('div#cor-resposta')
+    corResposta.style.backgroundColor = inputEl.value
+}
+
+
+let contagem = document.querySelector('span#contagem')
+for (contagem = 5; contagem > 0; contagem--) {
+    console.log(contagem)
 }
 
 function copiar() {
