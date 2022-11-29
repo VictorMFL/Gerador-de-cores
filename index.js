@@ -8,7 +8,7 @@ const inputEl = document.querySelector('#iresultado')
 let imgAtualizar = document.querySelector('span#atualizar')
 let imgCopiar = document.querySelector('span#copiar')
 let botaoAtualizar = document.querySelector('button')
-
+let contagem = document.querySelector('span#contagem')
 
 function geradorDeCores() {
     let cor = ''
@@ -33,15 +33,33 @@ function geradorDeCores() {
     inputEl.value = `${hashtag}` + cor
     console.log(cor)
 
+    
     let corResposta = document.querySelector('div#cor-resposta')
     corResposta.style.backgroundColor = inputEl.value
+
+
+    setTimeout(() => {
+        contagem.innerHTML = '5'
+    }, 1000, clearInterval)
+    setTimeout(() => {
+        contagem.innerHTML = '4'
+    }, 2000, clearInterval)
+    setTimeout(() => {
+        contagem.innerHTML = '3'
+    }, 3000, clearInterval)
+    setTimeout(() => {
+        contagem.innerHTML = '2'
+    }, 4000, clearInterval)
+    setTimeout(() => {
+        contagem.innerHTML = '1'
+    }, 5000, clearInterval)
+    setTimeout(() => {
+        contagem.innerHTML = '0'
+    }, 6000)
+
 }
 
 
-let contagem = document.querySelector('span#contagem')
-for (contagem = 5; contagem > 0; contagem--) {
-    console.log(contagem)
-}
 
 function copiar() {
     navigator.clipboard.writeText(inputEl.value)

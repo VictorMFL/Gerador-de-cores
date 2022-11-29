@@ -96,6 +96,5 @@ section#resposta > h2 {
 section#resposta > div#cor-resposta {
     width: 30%;
     height: 50%;
-    background-color: var(--RoxoClaro02);
     margin: 10px auto;
 }
