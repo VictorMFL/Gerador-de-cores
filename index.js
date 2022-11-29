@@ -34,10 +34,7 @@ function geradorDeCores() {
     console.log(cor)
 
 
-    let corResposta = document.querySelector('div#cor-resposta')
-    corResposta.style.backgroundColor = inputEl.value
-
-
+    
     setTimeout(() => {
         contagem.innerHTML = '5'
     }, 1000, clearInterval)
@@ -57,6 +54,11 @@ function geradorDeCores() {
         contagem.innerHTML = '0'
     }, 6000)
 
+
+    let corResposta = document.querySelector('div#cor-resposta')
+    setTimeout(() => {
+        corResposta.style.backgroundColor = inputEl.value
+    }, 6300)
 }
 
 
