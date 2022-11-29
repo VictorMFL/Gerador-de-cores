@@ -33,7 +33,7 @@ function geradorDeCores() {
     inputEl.value = `${hashtag}` + cor
     console.log(cor)
 
-    
+
     let corResposta = document.querySelector('div#cor-resposta')
     corResposta.style.backgroundColor = inputEl.value
 
