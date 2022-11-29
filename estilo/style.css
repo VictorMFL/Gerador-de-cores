@@ -11,12 +11,11 @@
     --RoxoEscuro02: #885de9;
     --RoxoClaro: #c290ff;
     --RoxoClaro02: #dea8ff;
-    --teste: #aaffda;
+    --verdeClaro: #aaffda;
 }
 
 body {
-    background-color: var(--teste);
-    /* background-color: #d3d3d3;  */
+    background-color: var(--verdeClaro);
 }
 
 main {
