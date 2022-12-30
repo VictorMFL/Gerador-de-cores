@@ -1,4 +1,4 @@
-const hashtag = '#'
+
 let caracteres = '0123456789abcdef'
 const ambosCaracteres = '0123456789abcdef'
 const numeros = '0123456789'
@@ -30,38 +30,38 @@ function geradorDeCores() {
         cor += caracteres.substring(randonNumber, randonNumber + 1)
     }
 
-    inputEl.value = `${hashtag}` + cor
-    console.log(cor)
-
-
-    
-    setTimeout(() => {
-        contagem.innerHTML = '5'
-    }, 1000, clearInterval)
-    setTimeout(() => {
-        contagem.innerHTML = '4'
-    }, 2000, clearInterval)
-    setTimeout(() => {
-        contagem.innerHTML = '3'
-    }, 3000, clearInterval)
-    setTimeout(() => {
-        contagem.innerHTML = '2'
-    }, 4000, clearInterval)
-    setTimeout(() => {
-        contagem.innerHTML = '1'
-    }, 5000, clearInterval)
-    setTimeout(() => {
-        contagem.innerHTML = '0'
-    }, 6000)
-
-
-    let corResposta = document.querySelector('div#cor-resposta')
-    setTimeout(() => {
-        corResposta.style.backgroundColor = inputEl.value
-    }, 6300)
+    inputEl.value = '#' + cor
 }
 
+function startTimer(duration, display) {
 
+    let corResposta = document.querySelector('div#cor-resposta')
+    corResposta.style.background = 'transparent'
+
+    var timer = duration, seconds;
+    setInterval(function() {
+        if (duration === 0) {
+            corResposta.style.background = inputEl.value
+        }
+        
+        seconds = parseInt(timer % 60, 10);
+        seconds = seconds;
+        display.textContent = seconds;
+        if (--timer < 0) {
+            timer = duration;
+        }else if(timer == 0) {
+            duration = 0
+        }
+    }, 1000);
+}
+
+window.onload = function () {
+    var duration = 60 - 55; // Converter para segundos
+    display = contagem // selecionando o timer
+    startTimer(duration, display); // iniciando o timer
+};
+
+            
 
 function copiar() {
     navigator.clipboard.writeText(inputEl.value)
@@ -69,7 +69,7 @@ function copiar() {
 
 imgCopiar.addEventListener('click', copiar)
 imgAtualizar.addEventListener('click', geradorDeCores)
-botaoAtualizar.addEventListener('click', geradorDeCores)
+botaoAtualizar.addEventListener('click', geradorDeCores, startTimer)
 
 
 geradorDeCores()
